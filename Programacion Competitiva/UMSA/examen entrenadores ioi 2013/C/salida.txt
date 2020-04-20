@@ -1,0 +1,301 @@
+Caso #1:
+2
+a: 6
+b: 3
+Total: 9
+Caso #2:
+6
+w: 3
+a: 1
+b: 1
+c: 1
+d: 3
+h: 2
+Total: 11
+Caso #3:
+3
+r: 3
+z: 3
+q: 5
+Total: 11
+Caso #4:
+1
+a: 11
+Total: 11
+Caso #5:
+11
+t: 1
+h: 1
+e: 2
+w: 1
+a: 2
+l: 1
+k: 1
+i: 1
+n: 1
+g: 1
+d: 2
+Total: 14
+Caso #6:
+6
+s: 1
+t: 2
+a: 2
+r: 2
+c: 1
+f: 1
+Total: 9
+Caso #7:
+10
+f: 1
+e: 2
+r: 1
+m: 2
+i: 1
+n: 2
+d: 2
+l: 1
+u: 1
+o: 1
+Total: 14
+Caso #8:
+9
+a: 2
+c: 3
+m: 1
+i: 3
+p: 1
+b: 1
+o: 1
+l: 1
+v: 1
+Total: 14
+Caso #9:
+10
+e: 6
+x: 1
+a: 2
+m: 1
+n: 3
+d: 2
+t: 1
+r: 2
+o: 1
+s: 1
+Total: 20
+Caso #10:
+8
+l: 2
+a: 3
+p: 1
+z: 1
+b: 1
+o: 1
+i: 2
+v: 1
+Total: 12
+Caso #11:
+6
+a: 3
+s: 2
+d: 3
+k: 1
+l: 1
+j: 1
+Total: 11
+Caso #12:
+10
+d: 2
+a: 1
+s: 3
+e: 1
+w: 1
+i: 1
+o: 1
+j: 1
+k: 1
+m: 1
+Total: 13
+Caso #13:
+6
+s: 4
+k: 3
+a: 3
+j: 1
+o: 1
+l: 1
+Total: 13
+Caso #14:
+6
+s: 4
+d: 1
+a: 3
+k: 2
+o: 2
+w: 1
+Total: 13
+Caso #15:
+6
+s: 4
+a: 4
+j: 2
+o: 3
+k: 1
+m: 1
+Total: 15
+Caso #16:
+6
+s: 2
+k: 1
+a: 3
+o: 1
+p: 3
+w: 1
+Total: 11
+Caso #17:
+23
+a: 1
+b: 1
+c: 1
+d: 1
+e: 1
+f: 1
+g: 1
+h: 1
+i: 2
+j: 1
+k: 1
+l: 1
+m: 1
+n: 1
+o: 1
+p: 1
+q: 1
+r: 1
+s: 1
+t: 1
+u: 1
+v: 1
+w: 1
+Total: 24
+Caso #18:
+7
+q: 1
+w: 3
+e: 4
+u: 1
+o: 2
+r: 1
+i: 1
+Total: 13
+Caso #19:
+6
+a: 3
+d: 2
+l: 1
+k: 2
+m: 2
+s: 3
+Total: 13
+Caso #20:
+7
+s: 3
+d: 1
+a: 3
+m: 1
+o: 3
+w: 2
+e: 1
+Total: 14
+Caso #21:
+9
+a: 1
+g: 1
+d: 4
+j: 1
+k: 1
+s: 1
+l: 1
+x: 2
+m: 2
+Total: 14
+Caso #22:
+6
+a: 1
+m: 3
+c: 1
+i: 2
+n: 1
+o: 2
+Total: 10
+Caso #23:
+8
+c: 3
+s: 2
+a: 2
+w: 3
+z: 1
+e: 1
+x: 1
+d: 1
+Total: 14
+Caso #24:
+7
+n: 2
+v: 5
+u: 2
+y: 1
+r: 1
+i: 1
+b: 2
+Total: 14
+Caso #25:
+7
+s: 2
+a: 1
+k: 1
+v: 1
+d: 1
+m: 5
+o: 1
+Total: 12
+Caso #26:
+3
+d: 4
+s: 3
+m: 13
+Total: 20
+Caso #27:
+7
+a: 2
+s: 1
+k: 1
+j: 1
+o: 1
+e: 5
+w: 1
+Total: 12
+Caso #28:
+6
+p: 1
+o: 1
+s: 8
+a: 1
+d: 1
+e: 1
+Total: 13
+Caso #29:
+4
+a: 4
+s: 7
+w: 2
+e: 3
+Total: 16
+Caso #30:
+5
+s: 4
+a: 1
+m: 4
+i: 1
+e: 1
+Total: 11

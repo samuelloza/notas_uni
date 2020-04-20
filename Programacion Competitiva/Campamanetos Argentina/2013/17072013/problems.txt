@@ -1,0 +1,10 @@
+http://www.spoj.pl/problems/DQUERY/
+https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4045
+https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4045
+http://acm.tju.edu.cn/toj/showp1398.html
+http://www.spoj.pl/problems/QTREE2/
+http://www.spoj.pl/problems/BYTESM2/
+http://www.codeforces.com/problemset/problem/272/C
+http://acm.tju.edu.cn/toj/showp1910.html
+http://www.codeforces.com/problemset/problem/19/D
+http://acm.tju.edu.cn/toj/showp1961.html

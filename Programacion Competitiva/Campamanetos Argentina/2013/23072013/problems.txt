@@ -1,0 +1,10 @@
+http://www.codeforces.com/problemset/problem/150/A
+http://www.codeforces.com/problemset/problem/274/A
+http://www.spoj.pl/problems/DONOTHIN/
+http://www.spoj.pl/problems/EDDIST/
+http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3318
+http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332
+http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3721
+http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3903
+http://acm.timus.ru/problem.aspx?space=1&num=1959
+http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1543

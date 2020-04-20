@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1336866429 source:/home/sam/acm/uva/10783/main.cpp
+	<iostream>
+	<stdio.h>
+

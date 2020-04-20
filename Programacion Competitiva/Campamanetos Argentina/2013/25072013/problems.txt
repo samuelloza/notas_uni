@@ -1,0 +1,12 @@
+http://www.codeforces.com/problemset/problem/322/B
+http://www.codeforces.com/problemset/problem/87/C
+http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1188
+http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1028
+http://www.spoj.pl/problems/POLYGAME/
+http://www.spoj.pl/problems/CANDN/
+http://www.spoj.pl/problems/CLOSEST/
+http://www.spoj.pl/problems/FILRTEST/
+http://www.spoj.pl/problems/ESCJAILA/
+http://www.spoj.pl/problems/TAP2012D/
+http://www.spoj.pl/problems/BNWNIM/
+http://www.codeforces.com/problemset/problem/269/C

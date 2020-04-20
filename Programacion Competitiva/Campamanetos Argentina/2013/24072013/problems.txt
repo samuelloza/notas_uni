@@ -1,0 +1,9 @@
+http://www.spoj.pl/problems/AXIS/
+http://www.spoj.pl/problems/BYECAKES/
+http://www.spoj.pl/problems/COUNTPAS/
+http://www.spoj.pl/problems/DINOSM/
+http://www.spoj.pl/problems/ESJAIL/
+http://www.spoj.pl/problems/FALTAENV/
+http://www.spoj.pl/problems/GUESSTHE/
+http://www.spoj.pl/problems/HEXBOARD/
+http://www.spoj.pl/problems/INTEGMAX/

@@ -1,0 +1,15 @@
+Variantes instrucción de transferencia de datos en lenguaje ensamblador MOV. Sin extensión de signo, y enviar.
+movzx es copiar el contenido del operando fuente al operando destino, y el valor 0 se extendió a 16 o 32. Pero sólo se aplica a un número entero sin signo. Él más o menos la siguiente tres formatos.
+  movzx 32 bits registros de propósito general, los ocho registros de propósito general / unidad de memoria
+  movzx 32 bits registros de propósito general de 16 bits registros de propósito general / unidad de memoria
+  movzx 16 bits registros de propósito general, los ocho registros de propósito general / unidad de memoria
+  Para dar un ejemplo. Por ejemplo
+  ?eax=00304000h
+  ??? movzx eax, ax? eax = 00004000h ?
+  ??? movzx eax, ah? eax = 00000040h?
+  ??:
+  MOV BL,80H
+  MOVZX AX,BL
+  Después de ejecutar la compilación de la sentencia anterior, AX valor 0080H. Debido BL es 80H, el bit más alto que es el bit de signo es 1, pero sin hacer extensión de signo, la extensión de la alta-8 son iguales a cero, por lo que el AX asignación es 0080H.
+  Resumen:
+  movzx hecho, nuestro operando fuente sacado, y luego se coloca en el operando destino, el operando destino trozos llenos de ceros restantes.

@@ -1,0 +1,10 @@
+http://www.codeforces.com/problemset/problem/327/E
+https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=2868
+http://acm.timus.ru/problem.aspx?space=1&num=1846
+http://www.spoj.pl/problems/BITMAP/
+http://www.codeforces.com/problemset/problem/11/D
+http://www.spoj.pl/problems/KITROB/
+https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3833
+https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=948
+http://www.spoj.pl/problems/CIRCSCR/
+http://www.codeforces.com/problemset/problem/283/C

@@ -1,0 +1,10 @@
+http://acm.timus.ru/problem.aspx?space=1&num=1139
+http://www.codeforces.com/problemset/problem/16/E
+http://www.spoj.pl/problems/FBRIDGES/
+http://www.spoj.pl/problems/INDIPROG/
+http://www.spoj.pl/problems/PT07X/
+http://acm.timus.ru/problem.aspx?space=1&num=1752
+http://acm.timus.ru/problem.aspx?space=1&num=1120
+http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405
+http://www.spoj.pl/problems/ASSIGN/
+https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=2475

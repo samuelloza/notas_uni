@@ -1,0 +1,243 @@
+\documentclass[10pt,letterpaper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amsmath}
+\usepackage{calc}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{pgfplots}
+\usepackage{array}
+
+%Poner la página en landscape
+\geometry{verbose,landscape,letterpaper,tmargin=1.5cm,bmargin=2cm,lmargin=1.6cm,rmargin=1.6cm}
+
+\newcommand{\source}[1]{
+	\verbatiminput{#1}
+	\dotfill
+}
+\setlength{\columnsep}{0.25in}
+\setlength{\columnseprule}{1px}
+
+
+\begin{document}
+
+
+\title{ANEXO\\Manual de algoritmos del semillero de programación EAFIT}
+\author{Ana Echavarría}
+\date{}
+\maketitle
+
+\tableofcontents
+
+\section{Plantilla}
+	\source{./src/template.cpp}
+
+\section{Grafos}
+
+	\subsection{BFS}
+		Algoritmo de recorrido de grafos en anchura que empieza desde una fuente $s$ y visita todos los nodos alcanzables desde $s$.\\
+		El BFS también halla la distancia más corta entre $s$ y los demás nodos si las aristas tienen todas peso 1.\\
+		Complejidad: $O(n+m)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/bfs.cpp}
+		
+	\subsection{DFS}
+		Algoritmo de recorrido de grafos en profundidad que empieza visita todos los nodos del grafo.\\
+		El algoritmo puede ser modificado para que retorne información de los nodos según la necesidad del problema.\\
+		El grafo tiene un ciclo $\leftrightarrow$ si en algún momento se llega a un nodo marcado como gris.\\
+		Complejidad: $O(n+m)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/dfs.cpp}
+		
+	\subsection{Ordenamiento topológico}
+		Dado un grafo no cíclico y dirigido (DAG), ordena los nodos linealmente de tal forma que si existe una arista entre los nodos $u$ y $v$ entonces $u$ aparece antes que $v$ en el ordenamiento.\\
+		Este ordenamiento se puede ver como una forma de poner todos los nodos en una línea recta y que las aristas vayan todas de izquierda a derecha.\\
+		Complejidad: $O(n+m)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/ordenamiento_topologico.cpp}
+		
+	\subsection{Componentes fuertemente conexas}
+		Dado un grafo dirigido, calcula la componente fuertemente conexa (SCC) a la que pertenece cada nodo.\\
+		Para cada pareja de nodos $u, v$ que pertenecen a una misma SCC se cumple que hay un camino de $u$ a $v$ y de $v$ a $u$.\\
+		Si se comprime el grafo dejando como nodos cada una de las componentes se quedará con un DAG.\\
+		Complejidad: $O(n+m)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/componentes_conexas.cpp}
+	
+	\subsection{Algoritmo de Dijkstra}
+		Dado un grafo con pesos \textbf{no negativos} en las aristas, halla la mínima distancia entre una fuente $s$ y los demás nodos.\\
+		Al heap se inserta primero la distancia y luego en nodo al que se llega. Si se quieren modificar los pesos por \verb|long long| o por \verb|double| se debe cambiar en los tipos de dato \verb|dist_node| y \verb|edge|.\\
+		Complejidad: $O((n+m) \operatorname{log} n)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/dijkstra.cpp}
+		
+	\subsection{Algoritmo de Bellman-Ford}
+		Dado un grafo con pesos cualquiera, halla la mínima distancia entre una fuente $s$ y los demás nodos.\\
+		Si hay un ciclo de peso negativo en el grafo, el algoritmo lo indica.\\
+		Complejidad: $O(n \times m)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/bellman_ford.cpp}
+	
+	\subsection{Algoritmo de Floyd-Warshall}
+		Dado un grafo con pesos cualquiera, halla la mínima distancia entre cualquier para de nodos.\\
+		Si este algoritmo es muy lento para el problema ejecutar $n$ veces el algoritmo de Dijkstra o de Bellman-Ford según el caso.\\
+		Complejidad: $O(n^3)$ donde $n$ es el número de nodos.\\ \quad \\
+		Casos base: 
+		$\verb|d[i][j]| =
+			\begin{cases}
+				0       &\text{\quad si } i = j\\
+				w_{i,j} &\text{\quad si existe una arista entre $i$ y $j$}\\
+				+\infty &\text{\quad en otro caso}
+			\end{cases}$ \\
+			
+		\quad \\ \textbf{Nota:} Utilizar el tipo de dato apropiado (\verb|int|, \verb|long long|, \verb|double|) para \verb|d| y para $+\infty$ según el problema.
+		
+		\source{./src/floyd-warshall.cpp}
+		
+		\subsubsection{Clausura transitiva}
+		Dado un grafo cualquiera, hallar si existe un camino desde $i$ hasta $j$ para cualquier pareja de nodos $i, j$\\ \quad \\
+		Casos base:
+		$\verb|d[i][j]| =
+			\begin{cases}
+				\verb|true |   &\text{\quad si } i = j\\
+				\verb|true |   &\text{\quad si existe una arista entre $i$ y $j$}\\
+				\verb|false|   &\text{\quad en otro caso}
+			\end{cases}$ \\ \quad \\
+		Caso recursivo: \verb|d[i][j] = d[i][j] or (d[i][k] and d[k][j]);|
+		
+		\subsubsection{Minimax}
+		Dado un grafo con pesos, hallar el camino de $i$ hasta $j$ donde la arista más grande del camino sea lo más pequeña posible.\\
+		Ejemplos: Que el peaje más caro sea lo más barato posible, que la autopista más larga sea lo más corta posible.\\ \quad \\
+		Casos base:
+		$\verb|d[i][j]| =
+			\begin{cases}
+				0         &\text{\quad si } i = j\\
+				w_{i,j}   &\text{\quad si existe una arista entre $i$ y $j$}\\
+				+\infty   &\text{\quad en otro caso}
+			\end{cases}$ \\ \quad \\
+		Caso recursivo: \verb|d[i][j] = min( d[i][j], max (d[i][k], d[k][j]) );|
+		
+		\subsubsection{Maximin}
+		Dado un grafo con pesos, hallar el camino de $i$ hasta $j$ donde la arista más pequeña del camino sea lo más grande posible.\\
+		Ejemplos: Que el trayecto menos seguro sea lo más seguro posible, que la autopista de menos carriles tenga la mayor cantidad de carriles.\\ \quad \\
+		Casos base:
+		$\verb|d[i][j]| =
+			\begin{cases}
+				+\infty   &\text{\quad si } i = j\\
+				w_{i,j}   &\text{\quad si existe una arista entre $i$ y $j$}\\
+				-\infty   &\text{\quad en otro caso}
+			\end{cases}$ \\ \quad \\
+		Caso recursivo: \verb|d[i][j] = max( d[i][j] , min(d[i][k], d[k][j]) )|
+		
+	
+	\subsection{Algoritmo de Prim}
+	Dado un grafo no dirigido y conexo, retorna el costo del árbol de mínima expansión de ese grafo.\\
+	El costo del árbol de mínima expansión también se puede ver como el mínimo costo de las aristas de manera que haya un camino entre cualquier par de nodos.\\
+	Complejidad: $O(m \operatorname{log} n)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/prim.cpp}
+	
+	\subsection{Algoritmo de Kruskal}
+		\subsubsection{Union-Find}
+		Union-Find es una estructura de datos para almacenar una colección conjuntos disjuntos (no tienen elementos en común) que cambian dinámicamente.\\
+		Identifica en cada conjunto un ``padre'' que es un elemento al azar de ese conjunto y hace que todos los elementos del conjunto ``apunten'' hacia ese padre. \\
+		Inicialmente se tiene una colección donde cada elemento es un conjunto unitario.\\
+		Complejidad aproximada: $O(m)$ donde $m$ el número total de operaciones de \verb|initialize|, \verb|union| y \verb|join| realizadas.\\
+		\source{./src/union-find.cpp}
+		
+		\subsubsection{Algoritmo de Kruskal}
+		Dado un grafo no dirigido y conexo, retorna el costo del árbol de mínima expansión de ese grafo.\\
+		El costo del árbol de mínima expansión también se puede ver como el mínimo costo de las aristas de manera que haya un camino entre cualquier par de nodos.\\
+		Utiliza Union-Find para ver rápidamente qué aristas generan ciclos.\\
+		Complejidad: $O(m\operatorname{log} n)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/kruskal.cpp}
+		
+	\subsection{Algoritmo de máximo flujo}
+		Dado un grafo con capacidades enteras, halla el máximo flujo entre una fuente $s$ y un sumidero $t$.\\
+		Como el máximo flujo es igual al mínimo corte, halla también el mínimo costo de cortar aristas de manera que $s$ y $t$ queden desconectados.\\
+		Si hay varias fuentes o varios sumideros poner una súper-fuente / súper-sumidero que se conecte a las fuentes / sumideros con capacidad infinita.\\
+		Si los nodos también tienen capacidad, dividir cada nodo en dos nodos: uno al que lleguen todas las aristas y otro del que salgan todas las aristas y conectarlos con una arista que tenga la capacidad del nodo.\\
+		Complejidad: $O(n \cdot m^2)$ donde $n$ es el número de nodos y $m$ es el número de aristas.\\
+		\source{./src/maxflow.cpp}
+	
+\section{Teoría de números}
+	\subsection{Divisores de un número}
+	Imprime los divisores de un número (cuidado que no lo hace en orden).\\
+	Complejidad: $O(\sqrt{n})$ donde $n$ es el número.\\
+	\source{./src/divisors.cpp}
+	
+	\subsection{Máximo común divisor y mínimo común múltiplo}
+	Para hallar el máximo común divisor entre dos números \verb|a| y \verb|b| ejecutar el comando \verb|__gcd(a, b)|.\\
+	Para hallar el mínimo común múltiplo: \quad $ \displaystyle\operatorname{lcm}(a, b) = \frac{|a \cdot b|}{\operatorname{gcd}(a,b)}$
+	
+	\subsection{Criba de Eratóstenes}
+	Encuentra los primos desde 1 hasta un límite $n$.\\
+	\verb|sieve[i]| es falso sí y solo sí i es un número primo.\\
+	Complejidad: $O(n)$ donde $n$ es el límite superior.\\
+	\source{./src/sieve.cpp}
+	
+	\subsection{Factorización prima de un número}
+	Halla la factorización prima de un número $a$ positivo. Si $a$ es negativo llamar el algoritmo con $|a|$ y agregarle -1 a la factorización.\\
+	Se asume que ya se ha ejecutado el algoritmo para generar los primos hasta al menos $\sqrt{a}$.\\
+	El algoritmo genera la lista de primos en orden de menor a mayor.\\
+	Utiliza el hecho de que en la factorización prima de $a$ aparece máximo un primo mayor a $\sqrt{a}$.\\
+	Complejidad aproximada: $O(\sqrt{a})$\\
+	\source{./src/factorization.cpp}
+	
+	\subsection{Exponenciación logarítmica}
+		\subsubsection{Propiedades de la operación módulo}
+		\begin{itemize}
+			\item $(a \operatorname{mod} n) \operatorname{mod} n = a \operatorname{mod} n$
+			\item $(a + b) \operatorname{mod} n = ((a \operatorname{mod} n) + (b\operatorname{mod} n)) \operatorname{mod} n$
+			\item $(a \cdot b) \operatorname{mod} n = ((a \operatorname{mod} n) \cdot (b\operatorname{mod} n)) \operatorname{mod} n$
+			\item $\displaystyle\left(\frac{a}{b} \right) \operatorname{mod} n \neq \left(\frac{a \operatorname{mod} n}{b\operatorname{mod} n}\right) \operatorname{mod} n$
+		\end{itemize}
+		
+		\subsubsection{Big mod}
+		Halla rápidamente el valor de $b^{\,p} \operatorname{mod} m$ para $0 \leq b,p,m \leq 2147483647$\\
+		Si se cambian los valores por \verb|long long| los límites se cambian por $0 \leq b,p \leq 9223372036854775807$ y $1 \leq m \leq 3037000499$.\\ 
+		Complejidad: $O(\operatorname{log} p)$\\
+		\source{./src/bigmod.cpp}
+	
+	\subsection{Combinatoria}
+		\subsubsection{Coeficientes binomiales}
+		Halla el valor de $\binom{n}{k}$ para $0 \leq k \leq n \leq 66$. Para $n > 66$ los valores comienzan a ser muy grandes y no caben en un \verb|long long|.\\
+		Complejidad: $O(n^2)$\\
+		\source{./src/binomial.cpp}
+		
+		\subsubsection{Propiedades de combinatoria}
+		\begin{itemize}
+			\item El número de permutaciones de $n$ elementos diferentes es $n!$
+			\item El número de permutaciones de $n$ elementos donde hay $m_1$ elementos repetidos de tipo 1, $m_2$ elementos repetidos de tipo 2,~\ldots, $m_k$ elementos repetidos de tipo $k$ es $$\frac{n!}{m_1! m_2! \cdots m_k!} $$
+			\item El número de permutaciones de $k$ elementos diferentes tomados de un conjunto de $n$ elementos es $$ \frac{n!}{(n-k)!} = k! \binom{n}{k}$$
+		\end{itemize}
+		
+		
+	
+\section{Programación dinámica}
+	\subsection{Problema de la mochila}
+	Halla el valor máximo que se puede obtener al empacar un subconjunto de $n$ objetos en una mochila de tamaño $W$ cuando se conoce el valor y el tamaño de cada objeto.\\
+	Complejidad: $O(n \times W)$ donde $n$ es el número de objetos y $W$ es la capacidad de la mochila.\\
+	\source{./src/knapsack.cpp}
+	
+	
+\section{Strings}
+	\subsection{Longest common subsequence}
+	Halla la longitud de la máxima subsecuencia (no substring) de dos cadenas $s$ y $t$.\\
+	Una subsecuencia de una secuencia $s$ es una secuencia que se puede obtener de $s$ al borrarle algunos de sus elementos (probablemente todos) sin cambiar el orden de los elementos restantes.\\
+	El algoritmo también se puede aplicar para vectores de elementos, no sólo para strings.\\
+	Complejidad: $O(n \times m)$ donde $n$ es la longitud de $s$ y $m$ es la longitud de $t$.\\
+	\source{./src/lcs.cpp}
+	
+	\subsection{Longest increasing subsequence}
+	Halla la longitud de la subsecuencia creciente más larga que hay en un string~$s$ (también se puede usar con vectores).\\
+	Complejidad: $O(n^2)$ donde $n$ es la longitud de~$s$.\\
+	\source{./src/lis.cpp}
+	
+	\subsection{Algoritmo de KMP}
+	Encuentra si el string \verb|needle| aparece en en string \verb|haystack|.\\
+	Si no se retorna directamente \verb|true| cuando se halla la primera ocurrencia, el algoritmo encuentra todas las ocurrencias de \verb|needle| en \verb|haystack|.\\
+	La primera parte del algoritmo llena el arreglo \verb|border| donde \verb|border[i]| es la longitud del borde del prefijo de \verb|needle| que termina en la posición \verb|i|. Un borde de una cadena $s$ es la cadena más larga que es a la vez prefijo y sufijo de $s$ pero que es diferente de $s$.\\
+	Complejidad: $O(n)$ donde $n$ es el tamaño de \verb|haystack|.\\
+	\source{./src/kmp.cpp}
+	
+
+\end{document}
