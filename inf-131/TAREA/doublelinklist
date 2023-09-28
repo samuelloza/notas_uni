@@ -1,0 +1,160 @@
+package LinkGeneerico;
+
+/**
+ * @Nombre : Samuel R.Loza RAmirez
+ * @Materia : Inf-LAB-131
+ */
+class DoubleLinkList<E> {
+	Node<E> first;
+	Node<E> last;
+
+	public DoubleLinkList() {
+		first = null;
+		last = null;
+	}
+
+	public boolean isEmpty() {
+		return first == null;
+	}
+
+	public void insertFirst(E e) {
+		Node<E> aux = new Node<E>(e);
+		if (isEmpty()) {
+			last = aux;
+		} else {
+			first.prev = aux;
+		}
+		aux.next = first;
+		first = aux;
+	}
+
+	public void insertLast(E e) {
+
+		Node<E> aux = new Node<E>(e);
+		if (isEmpty()) {
+			first = aux;
+		} else {
+			last.next = aux;
+			aux.prev = last;
+		}
+		last = aux;
+	}
+
+	public Node<E> deleteFirst() {
+		Node<E> aux = first;
+		if (first.next == null)
+			last = null;
+		else {
+			first.next.prev = null;
+		}
+		first = first.next;
+		return aux;
+	}
+
+	public Node<E> deleteLast() {
+		Node<E> aux = last;
+		if (first.next == null)
+			first = null;
+		else {
+			last.prev.next = null;
+		}
+		last = last.prev;
+		return aux;
+	}
+
+	public boolean insertAfter(E d, E dd) {
+		Node<E> aux = first;
+		while (aux.item != d) {
+			aux = aux.next;
+			if (aux == null) {
+				return false;
+			}
+		}
+		Node<E> aux2 = new Node<E>(dd);
+		if (aux == last) {
+			aux2.next = null;
+			last = aux2;
+		} else {
+			aux2.next = aux.next;
+			aux.next.prev = aux2;
+		}
+		aux2.prev = aux;
+		aux.next = aux2;
+		return true;
+	}
+
+	public Node<E> deleteKey(E key) {
+		Node<E> aux = first;
+		while (aux.item != key) {
+			aux = aux.next;
+			if (aux == null) {
+				return null;
+			}
+		}
+		if (aux == first) {
+			first = aux.next;
+		} else {
+			aux.prev.next = aux.next;
+
+		}
+		if (aux == last) {
+			last = aux.prev;
+		} else {
+			aux.next.prev = aux.prev;
+		}
+		return aux;
+	}
+
+	public void displayForwad() {
+		Node<E> aux = first;
+		while (aux != null) {
+			aux.displayLink();
+			aux = aux.next;
+		}
+	}
+
+	public void displayBackWard() {
+		Node<E> aux = last;
+		while (aux != null) {
+			aux.displayLink();
+			aux = aux.prev;
+		}
+	}
+}
+
+class Node<E> {
+	E item;
+	Node next;
+	Node<E> prev;
+
+	public Node(E dd) {
+		this.item = dd;
+	}
+
+	public void displayLink() {
+		System.out.println(item + " ");
+	}
+}
+
+class Linked {
+	public static void main(String[] args) {
+		DoubleLinkList<String> aux = new DoubleLinkList<String>();
+		aux.insertLast("hola");
+		aux.insertLast("casa");
+		aux.insertLast("hola....");
+		aux.insertAfter("hola", "como ");
+		aux.displayBackWard();
+
+		System.out.println("<---------------------->");
+		DoubleLinkList<Integer> aux2 = new DoubleLinkList<Integer>();
+		aux2.insertLast(1);
+		aux2.insertFirst(3);
+		aux2.insertFirst(4);
+		aux2.insertFirst(5);
+		aux2.insertFirst(7);
+		aux2.insertAfter(7, 2011);
+		aux2.displayForwad();
+
+	}
+}
+

@@ -1,0 +1,65 @@
+public void adiciona(String ci,String nom)
+	{
+		Nodo_L R=primeroM;
+		ListaPrimeroUltimo A= new ListaPrimeroUltimo();
+		int sw=0;
+		while(R!= null && sw==0)
+		{
+			if(R.nom_ciudad.equals(ci))
+			{
+				A.primero=R.enlace_sublista;
+				A.insertaPrimero(nom);
+				sw=1;
+				R.enlace_sublista=A.primero;
+			}
+			R=R.sig;
+		}
+		if(sw==0)
+			System.out.print("no se encuentra la ciudad");
+		else
+			System.out.print("persona "+ nom +" adicionada a la ciudad "+ci);
+	}
+	public void elimina(String ci,String nom)
+	{
+		Nodo_L R=primeroM;
+		ListaPrimeroUltimo A= new ListaPrimeroUltimo();
+		int sw=0;
+		while(R!= null && sw==0)
+		{
+			if(R.nom_ciudad.equals(ci))
+			{
+				A.primero=R.enlace_sublista;
+				Nodo_SL aux=A.primero;
+				Nodo_SL anterior=null;
+				while(aux!= null && sw==0)
+				{
+					if(aux.nom_persona.equals(nom))
+					{
+						if(anterior==null)
+							A.eliminaPrimero();
+						else
+							anterior.sig=aux.sig;
+						sw=1;
+						R.enlace_sublista=A.primero;
+					}
+					anterior= aux;
+					aux=aux.sig;
+				}
+			}
+			R=R.sig;
+		}
+		if(sw==0)
+			System.out.print("NO HECHO");
+		else
+			System.out.print("HECHO");	
+	}
+
+
+
+System.out.println("\nADICIONANDO UNA PERSONA A LA CIUDAD x");
+		Mlista.adiciona("La Paz","jose");
+		Mlista.mostrar();
+		
+		System.out.println("\nELIMINANDO UNA PERSONA A LA CIUDAD x");
+		Mlista.elimina("Cbba","carlos");
+		Mlista.mostrar();

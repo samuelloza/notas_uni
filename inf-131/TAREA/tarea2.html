@@ -1,0 +1,601 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.2  (Unix)">
+	<META NAME="AUTHOR" CONTENT="zamuel ">
+	<META NAME="CREATED" CONTENT="20111018;16321000">
+	<META NAME="CHANGEDBY" CONTENT="zamuel ">
+	<META NAME="CHANGED" CONTENT="20111018;16542700">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-BO" DIR="LTR">
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Arial, serif"><FONT SIZE=3><B>Nombre</B></FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=3>:
+Loza Ramírez Samuel Rene.  	</FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=3><B>CI:</B></FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=3>
+8448507 LP                                     </FONT></FONT><FONT FACE="Arial, serif"><FONT SIZE=6 STYLE="font-size: 28pt">L</FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1px solid #00000a; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.04cm; padding-left: 0cm; padding-right: 0cm">
+<FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT FACE="Arial, serif"><FONT SIZE=3><B>Docente:
+Lic. Honny Felipez             		Paralelo: C</B></FONT></FONT></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><B><BR>1.-
+Implementar una cola de prioridad basada en una lista ordenada.</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"> <FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><B>Para
+eliminar de la cola de prioridad elimina el elemento con la clave mas
+pequeña</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><B><FONT COLOR="#000000"><BR><BR></FONT></B><FONT COLOR="#7f0055"><B>class</B></FONT><FONT COLOR="#000000"><B>
+Link {</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+Link </FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+Link(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+dd) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">
+= dd;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+displayLink() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		System.</FONT><FONT COLOR="#0000c0"><I>out</I></FONT><FONT COLOR="#000000">.print(</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">
++ </FONT><FONT COLOR="#2a00ff">&quot; &quot;</FONT><FONT COLOR="#000000">);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#7f0055"><B>class</B></FONT><B>
+SortedList {</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>private</B></FONT><FONT COLOR="#000000">
+Link </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+SortedList() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>boolean</B></FONT><FONT COLOR="#000000">
+isEmpty() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+(</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000"> ==
+</FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+insert(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+key) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux = </FONT><FONT COLOR="#7f0055"><B>new</B></FONT><FONT COLOR="#000000">
+Link(key);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux2 = </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux3 = </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>while</B></FONT><FONT COLOR="#000000">
+(aux3 != </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">
+&amp;&amp; key &gt; aux3.</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">)
+{</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">			aux2
+= aux3;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			aux3
+= aux3.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(aux2 == </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">)</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>else</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			aux2.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		aux.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= aux3;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+remove() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux = </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+aux.</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+displayList() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux3 = </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>while</B></FONT><FONT COLOR="#000000">
+(aux3 != </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">)
+{</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">			aux3.displayLink();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			aux3
+= aux3.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		System.</FONT><FONT COLOR="#0000c0"><I>out</I></FONT><FONT COLOR="#000000">.println(</FONT><FONT COLOR="#2a00ff">&quot;&quot;</FONT><FONT COLOR="#000000">);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#7f0055"><B>public</B></FONT><B>
+</B><FONT COLOR="#7f0055"><B>class</B></FONT><B> ColaPrioridad {</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	SortedList
+</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+ColaPrioridad() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>new</B></FONT><FONT COLOR="#000000">
+SortedList();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+insert(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+x) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.insert(x);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+remove() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.remove();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+display() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.displayList();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#7f0055"><B>class</B></FONT><B>
+Main {</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>static</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+main(String[] args) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		ColaPrioridad
+aux = </FONT><FONT COLOR="#7f0055"><B>new</B></FONT><FONT COLOR="#000000">
+ColaPrioridad();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.insert(10);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.insert(9);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.insert(12);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.insert(0);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.display();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		System.</FONT><FONT COLOR="#0000c0"><I>out</I></FONT><FONT COLOR="#000000">.println(aux.remove());</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.display();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><IMG SRC="tarea2_html_1c4e8625.jpg" NAME="gráficos1" ALIGN=LEFT WIDTH=441 HEIGHT=184 BORDER=0><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2><FONT SIZE=2 STYLE="font-size: 9pt">}</FONT><FONT SIZE=2 STYLE="font-size: 9pt"><B><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR></B></FONT></FONT></FONT></FONT><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2><FONT SIZE=2 STYLE="font-size: 9pt"><B><BR><BR><BR>Implemente
+una bicola basada en una lista doble  </B></FONT></FONT></FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#7f0055"><B>class</B></FONT>
+Link {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+Link </FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+Link </FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+Link(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+d) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">
+= d;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+displayLink() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		System.</FONT><FONT COLOR="#0000c0"><I>out</I></FONT><FONT COLOR="#000000">.print(</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">
++ </FONT><FONT COLOR="#2a00ff">&quot; &quot;</FONT><FONT COLOR="#000000">);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#7f0055"><B>class</B></FONT><FONT COLOR="#000000">
+DoublyLinkedList {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>private</B></FONT><FONT COLOR="#000000">
+Link </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>private</B></FONT><FONT COLOR="#000000">
+Link </FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+DoublyLinkedList() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>boolean</B></FONT><FONT COLOR="#000000">
+isEmpty() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000"> == </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+insertF(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+dd) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux = </FONT><FONT COLOR="#7f0055"><B>new</B></FONT><FONT COLOR="#000000">
+Link(dd);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(isEmpty())</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>else</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		aux.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+insertL(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+dd) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux = </FONT><FONT COLOR="#7f0055"><B>new</B></FONT><FONT COLOR="#000000">
+Link(dd);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(isEmpty())</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>else</B></FONT><FONT COLOR="#000000">
+{</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			aux.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+deleteF() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux = </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+== </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">)</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>else</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+aux.</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+deleteL() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux = </FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+== </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">)</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>else</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+aux.</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>boolean</B></FONT><FONT COLOR="#000000">
+insertAfter(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+key, </FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+dd) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+ant = </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>while</B></FONT><FONT COLOR="#000000">
+(ant.</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">
+!= key) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			ant
+= ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(ant == </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">)</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">				</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>false</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+aux = </FONT><FONT COLOR="#7f0055"><B>new</B></FONT><FONT COLOR="#000000">
+Link(dd);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(ant == </FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">)
+{</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			aux.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		}
+</FONT><FONT COLOR="#7f0055"><B>else</B></FONT><FONT COLOR="#000000">
+{</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			aux.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		aux.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">
+= ant;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= aux;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>true</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+Link deleteKey(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+key) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+ant = </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>while</B></FONT><FONT COLOR="#000000">
+(ant.</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">
+!= key) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			ant
+= ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(ant == </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">)</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">				</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(ant == </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">)</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">
+= ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>else</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			ant.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">
+= ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>if</B></FONT><FONT COLOR="#000000">
+(ant == </FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">)</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">
+= ant.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>else</B></FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">
+= ant.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+ant;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+displayForward() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+ant = </FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>while</B></FONT><FONT COLOR="#000000">
+(ant != </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">)
+{</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">			ant.displayLink();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			ant
+= ant.</FONT><FONT COLOR="#0000c0">next</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		System.</FONT><FONT COLOR="#0000c0"><I>out</I></FONT><FONT COLOR="#000000">.println(</FONT><FONT COLOR="#2a00ff">&quot;&quot;</FONT><FONT COLOR="#000000">);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+displayBackward() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		Link
+ant = </FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>while</B></FONT><FONT COLOR="#000000">
+(ant != </FONT><FONT COLOR="#7f0055"><B>null</B></FONT><FONT COLOR="#000000">)
+{</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">			ant.displayLink();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">			ant
+= ant.</FONT><FONT COLOR="#0000c0">prev</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		System.</FONT><FONT COLOR="#0000c0"><I>out</I></FONT><FONT COLOR="#000000">.println(</FONT><FONT COLOR="#2a00ff">&quot;&quot;</FONT><FONT COLOR="#000000">);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+peek() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">F</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+peek2() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">L</FONT><FONT COLOR="#000000">.</FONT><FONT COLOR="#0000c0">Dato</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000"><FONT FACE="Monospace">}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>class</B></FONT><FONT COLOR="#000000">
+DEQUE {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	DoublyLinkedList
+</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+DEQUE() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">
+= </FONT><FONT COLOR="#7f0055"><B>new</B></FONT><FONT COLOR="#000000">
+DoublyLinkedList();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+insertF(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+x) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.insertF(x);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+insertL(</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+x) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.insertL(x);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+removeF() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.deleteF();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+removeL() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.deleteL();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+displayF() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.displayForward();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+displayL() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.displayBackward();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+peek() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.peek();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>long</B></FONT><FONT COLOR="#000000">
+peek2() {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		</FONT><FONT COLOR="#7f0055"><B>return</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000c0">aux</FONT><FONT COLOR="#000000">.peek2();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000"><FONT FACE="Monospace">}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>class</B></FONT><FONT COLOR="#000000">
+Main {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">	</FONT><FONT COLOR="#7f0055"><B>public</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>static</B></FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#7f0055"><B>void</B></FONT><FONT COLOR="#000000">
+main(String[] args) {</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		DEQUE
+aux = </FONT><FONT COLOR="#7f0055"><B>new</B></FONT><FONT COLOR="#000000">
+DEQUE();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.insertF(12);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.insertF(13);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.insertF(14);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.insertF(15);</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000">		System.</FONT><FONT COLOR="#0000c0"><I>out</I></FONT><FONT COLOR="#000000">.println(</FONT><FONT COLOR="#2a00ff">&quot;PEEK
+---&gt;&quot;</FONT><FONT COLOR="#000000">+aux.peek());</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">		aux.displayF();</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Monospace"><FONT SIZE=2 STYLE="font-size: 9pt">	}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 9pt"><FONT COLOR="#000000"><FONT FACE="Monospace">}</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm"><IMG SRC="tarea2_html_m569fc0b2.jpg" NAME="gráficos2" ALIGN=LEFT WIDTH=438 HEIGHT=182 BORDER=0><BR>
+</P>
+</BODY>
+</HTML>

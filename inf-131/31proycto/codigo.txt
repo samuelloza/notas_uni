@@ -1,0 +1,100 @@
+import java.util.Scanner;
+import java.util.Stack;
+
+public class label {
+
+        static Scanner sc = new Scanner(System.in);
+        static boolean mat2[][];
+        static String mat[][];
+        static Stack<String> aux = new Stack<String>();
+
+        public static void main(String[] args) {
+                int x, y;
+                x = sc.nextInt();
+                y = sc.nextInt();
+                mat = new String[x][y];
+                mat2 = new boolean[x][y];
+                llenar(y, x);
+                //
+                for (int i = 0; i < x; i++) {
+                        for (int j = 0; j < y; j++) {
+                                if (!mat2[i][j]&&!mat[i][j].equals("1")) {
+                                        busca(i, j, y);
+                                        aux.push(i + "," + j);
+                                        mat[i][j] = "x";
+                                }
+                        }
+                }
+                //
+
+                
+                System.out.println("<..........>");
+                mostrar(x, y);
+                while (!aux.empty()) {
+                        System.out.println(aux.pop());
+                }
+                System.out.println();
+                System.out.println();
+               
+        }
+
+        
+
+        public static void busca(int i, int j, int n) {
+                mat2[i][j]=false;
+                if (!desborda(i - 1, j, n) && mat2[i - 1][j]) {
+                        busca(i - 1, j, n);
+                }
+
+                if (!desborda(i, j + 1, n) && mat2[i][j + 1]) {
+                        busca(i, j + 1, n);
+                }
+
+                if (!desborda(i + 1, j, n) && mat2[i + 1][j]) {
+                        busca(i + 1, j, n);
+                }
+
+                if (!desborda(i, j - 1, n) && mat2[i][j - 1]) {
+                        busca(i, j - 1, n);
+                }
+                if (!desborda(i - 1, j - 1, n) && mat2[i - 1][j - 1]) {
+                        busca(i - 1, j - 1, n);
+                }
+                if (!desborda(i - 1, j + 1, n) && mat2[i - 1][j + 1]) {
+                        busca(i - 1, j + 1, n);
+                }
+                if (!desborda(i + 1, j - 1, n) && mat2[i + 1][j - 1]) {
+                        busca(i + 1, j - 1, n);
+                }
+                if (!desborda(i + 1, j + 1, n) && mat2[i + 1][j + 1]) {
+                        busca(i + 1, j + 1, n);
+                }
+        }
+        public static boolean desborda(int i, int j, int n) {
+                if (i >= 0 && j >= 0 && i < n && j < n)
+                        return false;
+                return true;
+        }
+        private static void mostrar(int y, int y2) {
+                for (int i = 0; i < y; i++) {
+                        for (int j = 0; j < y2; j++) {
+                                System.out.print(mat[i][j]);
+                        }
+                        System.out.println();
+                }
+        }
+
+        private static void llenar(int x, int y) {
+                for (int i = 0; i < x; i++) {
+                        String aux = sc.next();
+                        for (int j = 0; j < y; j++) {
+                                mat[i][j] = aux.substring(j, j + 1);
+                                if (mat[i][j].equals("1")) {
+                                        mat2[i][j] = true;
+                                }
+                        }
+                }
+
+        }
+
+}

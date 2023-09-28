@@ -1,0 +1,30 @@
+Temario
+.......
+	Pilas
+	Colas
+	Listas
+	Arboles
+	Arboles Balanceados
+	Heaps
+	Grafos
+	Colas con Prioridad
+	Hashing
+.......................
+Puntaje
+.......
+	1. Pilas		9 pts.
+	2. Colas 		9 pts.
+	3. Listas		9 pts.
+	4. Listas multiples	9 pts.
+	5. Arboles		9 pts.
+
+	Asistencia		15 pts.
+	
+	Proyecto 1. 		7.5 pts.
+	Proyecto 2. 		7.5 pts.
+	
+	Ex. Final		25 pts.
+
+Nota: todo informe se presenta antes de la defensa,
+..... el informe debe ser impreso, debe incluir 
+      capturas de pantallas.

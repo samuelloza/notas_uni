@@ -1,0 +1,181 @@
+package Proyectoos;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class proy1 {
+	static Scanner sc = new Scanner(System.in);
+	static String mat[][];
+	static Stack<String> aux = new Stack<String>();
+	static Stack<String> aux2 = new Stack<String>();
+	static int ii, jj;
+	static int x, y;
+	static int i = 0, j = 0;
+	static boolean sw = false;
+
+	public static void main(String[] args) {
+
+		x = sc.nextInt();
+		y = sc.nextInt();
+		mat = new String[x][y];
+		llenar(x, y);
+		revilasdos(j, i, 1);
+		if (!sw) {
+			while (!aux.empty() && !sw) {
+				jj = Integer.parseInt(aux2.pop());
+				ii = Integer.parseInt(aux.pop());
+				revilasdos(jj, ii, 0);
+			}
+		}
+		if (sw) {
+			System.out.println(" tiene fin ");
+		} else {
+			System.out.println(" no fin");
+		}
+		mostrar(x, y);
+	}
+
+	private static void revilasdos(int j, int i, int s) {
+		if (j == x - 1 && i == y - 1) {
+			sw = true;
+			return;
+		}
+		// mismo lugar x si no esta marcado
+		if (desborda(j, i, x, y)) {
+			if (mat[j][i].equals("0")) {
+				mat[j][i] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				revilasdos(j, i, s);
+				return;
+			}
+		}
+
+		// recto
+		if (desborda(j, i + 1, x, y)) {
+			if (mat[j][i + 1].equals("0")) {
+				mat[j][i + 1] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				i++;
+				revilasdos(j, i, s);
+				return;
+			}
+
+		}
+		// abajo
+		if (desborda(j + 1, i, x, y)) {
+			if (mat[j + 1][i].equals("0")) {
+				mat[j + 1][i] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				j++;
+				revilasdos(j, i, s);
+				return;
+
+			}
+		}
+
+		// abajo hacia arriba
+		if (desborda(j - 1, i, x, y)) {
+			if (mat[j - 1][i].equals("0")) {
+				mat[j - 1][i] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				j--;
+				revilasdos(j, i, s);
+				return;
+			}
+		}
+
+		// recto hacia atras
+
+		if (desborda(j, i - 1, x, y)) {
+			if (mat[j][i - 1].equals("0")) {
+				mat[j][i - 1] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				i--;
+				revilasdos(j, i, s);
+				return;
+			}
+
+		}
+
+		// diagonales
+		if (desborda(j - 1, i - 1, x, y)) {
+
+			if (mat[j - 1][i - 1].equals("0")) {
+				mat[j - 1][i - 1] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				j--;
+				i--;
+				revilasdos(j, i, s);
+				return;
+			}
+		}
+		//
+		if (desborda(j + 1, i + 1, x, y)) {
+			if (mat[j + 1][i + 1].equals("0")) {
+				mat[j + 1][i + 1] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				j++;
+				i++;
+				revilasdos(j, i, s);
+				return;
+			}
+		}
+
+		if (desborda(j + 1, i - 1, x, y)) {
+			if (mat[j + 1][i - 1].equals("0")) {
+				mat[j + 1][i - 1] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				j++;
+				i--;
+				revilasdos(j, i, s);
+				return;
+			}
+		}
+		if (desborda(j - 1, i + 1, x, y)) {
+			if (mat[j - 1][i + 1].equals("0")) {
+				mat[j - 1][i + 1] = "x";
+				aux.push(i + "");
+				aux2.push(j + "");
+				j--;
+				i++;
+				revilasdos(j, i, s);
+				return;
+			}
+		}
+		// fin diagonales
+	}
+
+	public static boolean desborda(int i, int j, int x, int y) {
+		if (i >= 0 && j >= 0 && i < x && j < y)
+			return true;
+		return false;
+	}
+
+	private static void mostrar(int y, int y2) {
+		for (int i = 0; i < y; i++) {
+			for (int j = 0; j < y2; j++) {
+				System.out.print(mat[i][j]);
+			}
+			System.out.println();
+		}
+	}
+
+	private static void llenar(int x, int y) {
+		for (int i = 0; i < x; i++) {
+			String aux = sc.next();
+			for (int j = 0; j < y; j++) {
+				mat[i][j] = aux.substring(j, j + 1);
+			}
+		}
+
+	}
+}
+
